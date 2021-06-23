@@ -62,8 +62,8 @@ class CrossWLF(Model):
         super(CrossWLF, self).__init__()
         self.model = "Cross-WLF (pressure independant)"
         self.p0 = (2.e4, 5., 1., 1.e5, 430., 0.1)
-        self.bounds = ([0., 0., 0., 200., 0., 0.], [1.e6, 1.e6, 1.e4, 2.e20, 5.e2, 1.])
-        self.maxfev = 4000
+        self.bounds = ([0., 0., 0., 200., 0., 0.], [1.e6, 1.e6, 51.6, 2.e20, 5.e2, 1.])
+        self.maxfev = 8000
 
     def __call__(self, x, *args, **kwargs):
         T = x[0]
